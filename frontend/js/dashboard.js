@@ -1,4 +1,4 @@
-const API='https://food-tracker-isz1.onrender.com/api',token=localStorage.getItem('foodToken');if(!token)location.href='login.html';const $=id=>document.getElementById(id);const auth={Authorization:'Bearer '+token};
+const API='http://localhost:3000/api',token=localStorage.getItem('foodToken');if(!token)location.href='login.html';const $=id=>document.getElementById(id);const auth={Authorization:'Bearer '+token};
 const today=new Date().toISOString().slice(0,10);$('date').value=today;
 async function loadDay(){const d=$('date').value;$('dateTitle').textContent=new Date(d+'T00:00:00').toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'});const r=await fetch(API+'/meals/day/'+d,{headers:auth});const x=await r.json();['breakfast','lunch','dinner','snacks'].forEach(k=>$(k).checked=!!x[k]);$('notes').value=x.notes||''}
 $('date').addEventListener('change',loadDay);

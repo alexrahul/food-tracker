@@ -4,7 +4,8 @@
 <body>
 <header><h1>🛠️ Food Tracker Admin</h1><button id="logout" class="secondary">Logout</button></header>
 <main class="container">
-<section class="card"><h2>Overview</h2><div id="stats" class="stats-grid"></div></section>
+<section class="card"><h2>Overview</h2><div id="stats" class="stats-grid"></div>
+<div class="admin-actions"><button id="refresh" class="secondary">↻ Refresh Data</button><button id="exportAll" class="btn">📊 Export All Users to Excel</button><span id="lastUpdated"></span></div></section>
 <section class="card"><h2>Create User</h2>
 <form id="createUser" class="row">
 <input id="newName" placeholder="Name" required><input id="newEmail" type="email" placeholder="Email" required>
