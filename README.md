@@ -31,3 +31,4 @@ Open the generated URL, then register a user.
 The connection string is a secret. Never paste the real password into source code or GitHub.
 For production, set DATABASE_URL, JWT_SECRET and CORS_ORIGIN as deployment environment variables.
 "# food-tracker" 
+"# food-tracker" 
