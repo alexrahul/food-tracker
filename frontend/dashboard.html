@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Food Tracker Dashboard</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header><h1>🍽️ Food Tracker</h1><button id="logout" class="secondary">Logout</button></header>
+<main class="container"><section class="card"><div class="row"><label>Date <input id="date" type="date"></label><button id="save" class="btn">Save</button></div>
+<h2 id="dateTitle"></h2><div class="meals"><label><input id="breakfast" type="checkbox"> 🌅 Breakfast</label><label><input id="lunch" type="checkbox"> ☀️ Lunch</label><label><input id="dinner" type="checkbox"> 🌙 Dinner</label><label><input id="snacks" type="checkbox"> 🍎 Snacks</label></div>
+<textarea id="notes" placeholder="Notes for this day..."></textarea><p id="status"></p></section>
+<section class="card"><h2>This month</h2><div id="stats"></div><button id="export" class="btn">📥 Export Excel</button></section>
+<section class="card"><h2>Recent days</h2><div id="history"></div></section></main><script src="js/dashboard.js"></script></body></html>

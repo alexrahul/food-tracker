@@ -1,0 +1,4 @@
+import express from 'express';import cors from 'cors';import dotenv from 'dotenv';import auth from './routes/auth.js';import meals from './routes/meals.js';import exportRoute from './routes/export.js';
+import adminRoute from './routes/admin.js';
+dotenv.config();const app=express();app.use(cors({origin:process.env.CORS_ORIGIN?.split(',').map(x=>x.trim())||'*'}));app.use(express.json());app.get('/api/health',(req,res)=>res.json({ok:true}));app.use('/api/auth',auth);app.use('/api/meals',meals);app.use('/api/export',exportRoute);
+app.listen(process.env.PORT||3000,()=>console.log('Food Tracker API running on port '+(process.env.PORT||3000)));
